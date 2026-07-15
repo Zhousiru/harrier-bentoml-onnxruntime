@@ -50,7 +50,7 @@ ADAPTIVE_MAX_LATENCY_MS = int(os.getenv("ADAPTIVE_MAX_LATENCY_MS", "10"))
 
 
 class EmbeddingRequest(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="ignore")
 
     model: str
     input: Union[str, list[str]]
