@@ -296,7 +296,7 @@ class HarrierInferenceService:
         max_batch_size=ADAPTIVE_MAX_BATCH_SIZE,
         max_latency_ms=ADAPTIVE_MAX_LATENCY_MS,
     )
-    def encode(self, texts: list[str]) -> np.ndarray[Any, Any]:
+    def encode(self, texts: list[str]) -> np.ndarray:
         embeddings, token_counts = self._embed(texts)
         return np.column_stack((embeddings, token_counts.astype(np.float32)))
 
